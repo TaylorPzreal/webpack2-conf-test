@@ -1,0 +1,67 @@
+// 在这里引入font-awesome
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss'; // 注意这里不要加 `_` 下划线。
+@import 'colors.scss';
+
+html {
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+body {
+  background-image: url('../images/wallhaven-6687.jpg');
+  background-position: center;
+  background-size: cover;
+  font-size: 14px;
+  height: 100%;
+}
+
+.box {
+  background-color: $white;
+  border-radius: 0.2rem;
+  border-top: 0.2rem solid;
+  box-shadow: 0.1rem 0.2rem 0.2rem $grey, -0.1rem 0.2rem 0.2rem $grey;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .box-header {
+    border-bottom: 0.1rem solid $grey;
+    padding: 0.8rem;
+
+    .box-title {
+      font-size: 1.4rem;
+      margin: auto;
+    }
+  }
+
+  .box-body {
+    padding: 1rem 0.8rem;
+  }
+
+  .box-footer {
+    border-top: 0.1rem solid $grey;
+    padding: 1rem 0.8rem;
+  }
+}
+
+$boxcolor: ('default', $grey), ('info', $yellow), ('warning', $purple), ('danger', $red), ('success', $green), ('primary', $blue);
+@each $name, $color in $boxcolor {
+  .box-#{$name} {
+    border-top-color: $color;
+  }
+}
+
+.padding-tb-5 {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.padding-top-40 {
+  padding-top: 4rem;
+}
+
+.text-white {
+  color: $white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-controller="homeCtrl">
+
+<head>
+  <meta charset="utf-8">
+  <title>webpack2-conf-test</title>
+
+  <!-- 生产环境需要添加如下文件 -->
+  <link href="/dist/vendor.f7401b14f3808e0350bfd2deb68a2656.css" rel="stylesheet">
+  <link href="/dist/app.2cd2f27dcf5d87edb74a21e9de25b241.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="container">
+    <div class="row padding-top-80">
+      <div class="col-sm-12">
+        <h3 class="text-white">webpack2-conf-test</h3>
+        <hr>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="box box-success">
+          <div class="box-header">
+            <h3 class="box-title">第一步</h3>
+          </div>
+          <div class="box-body">
+            <ul>
+              <li><a href="">1. 全局安装NodeJS, Yarn, http-server</a></li>
+              <li><a href="">2. git clone && yarn install</a></li>
+              <li><a href="">3. yarn run start</a></li>
+            </ul>
+          </div>
+          <div class="box-footer">
+            <span>如有任何问题烦请留言讨论</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box box-danger">
+          <div class="box-header">
+            <h3 class="box-title">
+              联系方式
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="padding-tb-5"><a href="https://github.com/TaylorPzreal/webpack2-conf-test"><span class="fa fa-github"></span> TaylorPzreal</a></div>
+            <div class="padding-tb-5"><a href="https://twitter.com/TaylorPzreal"><span class="fa fa-twitter"></span> TaylorPzreal</a></div>
+            <div class="padding-tb-5"><a href="https://www.facebook.com/profile.php?id=100015289831100"><span class="fa fa-facebook"></span> TaylorPzreal</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box box-info">
+          <div class="box-header">
+            <h3 class="box-title">
+              图片测试
+            </h3>
+          </div>
+          <div class="box-body">
+            <div class="col-sm-12">
+              <img src="images/wallhaven-175999.jpg" style="max-width: 100%;" alt="图片">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="box box-warning">
+          <div class="box-header">
+            <h3 class="box-title">小图片测试，小于50K转换为Base64</h3>
+          </div>
+          <div class="box-body">
+            <div class="col-sm-12">
+              <img src="images/Selection_008.png" style="max-width: 100%" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 生产环境在此处添加已打包JS文件 -->
+  <script type="text/javascript" src="/dist/vendor.bundle.js"></script>
+  <script type="text/javascript" src="/dist/app.486921a6576f041407e4.js"></script>
+  <script type="text/javascript" src="/dist/polyfills.bfbcfc6f13ecf263f346.js"></script>
+</body>
+
+</html>

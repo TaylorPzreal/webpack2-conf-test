@@ -1,0 +1,3 @@
+/*! Copyright ark.proudsmart.com 2016 inc. */
+webpackJsonp([0],{"./js/app.bootstrap.js":function(s,o,n){"use strict";Object.defineProperty(o,"__esModule",{value:!0});n("./js/app.module.js");angular.element(document).ready(function(){angular.bootstrap(document,["app"])})},"./js/app.module.js":function(s,o,n){"use strict";var e=n("./scss/common.scss"),t=(n.n(e),n("./node_modules/angular/index.js")),a=n.n(t),c=a.a.module("app",[]);c.controller("homeCtrl",["$scope",function(s){console.info("恭喜您，测试成功")}])},"./scss/common.scss":function(s,exports){}},["./js/app.bootstrap.js"]);
+//# sourceMappingURL=app.486921a6576f041407e4.js.map
