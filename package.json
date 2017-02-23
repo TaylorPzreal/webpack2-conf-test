@@ -2,7 +2,6 @@
   "name": "webpack2-conf-test",
   "version": "1.0.0",
   "description": "webpack2在项目中的配置实践",
-  "main": "index.js",
   "repository": "git@github.com:TaylorPzreal/webpack2-conf-test.git",
   "author": "TaylorPzreal <taylorpzreal@gmail.com>",
   "license": "MIT",
