@@ -114,7 +114,7 @@ module.exports = {
 
     // 待补充资料
     new ManifestPlugin({
-      fileName: 'ark-manifest.json',
+      fileName: 'hm-manifest.json',
     }),
 
     new webpack.NamedModulesPlugin(), // 从浏览器的console观察更新的档案
@@ -148,6 +148,6 @@ module.exports = {
     }),
 
     // 实现文件顶部版权声明
-    new webpack.BannerPlugin('Copyright ark.proudsmart.com 2016 inc.')
+    new webpack.BannerPlugin('Copyright www.honeymorning.com 2017 inc.')
   ]
 };
