@@ -1,0 +1,21 @@
+{
+	"indent_size": 2,
+	"max_preserve_newlines": 3,
+	"preserve_newlines": true,
+
+	"js": {
+		"end_with_newline": true,
+		"indent_with_tabs": false
+	},
+
+	"css": {
+		"newline_between_rules": true,
+		"end_with_newline": true,
+		"selector_separator_newline": true,
+		"indent_with_tabs": false
+	},
+
+  "html": {
+    "indent_with_tabs": false
+  }
+}

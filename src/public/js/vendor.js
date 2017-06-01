@@ -6,4 +6,4 @@ import 'angular';
 
 
 // 这里引入第三方样式
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';

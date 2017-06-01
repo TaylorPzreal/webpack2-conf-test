@@ -3,7 +3,11 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const helpers = require('./helpers');
 const ManifestPlugin = require('webpack-manifest-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
+const os = require('os');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 // 定义环境变量
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
@@ -18,9 +22,9 @@ module.exports = {
   devtool: DEVELOPMENT ? 'cheap-eval-source-map' : 'cheap-module-source-map',
 
   entry: {
-    'polyfills': helpers.root('js', 'polyfills.js'),
-    'vendor': helpers.root('js', 'vendor.js'),
-    'app': helpers.root('js', 'app.bootstrap.js')
+    'polyfills': helpers.root('src/public', 'js', 'polyfills.js'),
+    'vendor': helpers.root('src/public', 'js', 'vendor.js'),
+    'app': helpers.root('src/public', 'js', 'app.bootstrap.js')
   },
 
   output: {
@@ -46,7 +50,7 @@ module.exports = {
       test: /\.js$/,
       enforce: 'pre',
       use: 'eslint-loader',
-      include: helpers.root('js')
+      include: helpers.root('src')
     }, {
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/, //手动添加必须处理的文件（文件夹）或屏蔽不需要处理的文件
@@ -54,32 +58,38 @@ module.exports = {
         loader: 'babel-loader',
         options: {
           presets: [
+            ['env', {
+              'modules': false,
+              'targets': {
+                'node': 4
+              }
+            }],
             ['es2015', {
               modules: false, // tree shinking
               loose: false,
               cacheDirectory: true // 添加缓存
             }]
-          ]
+          ],
+          plugins: ['lodash', 'syntax-dynamic-import']
         }
       }]
     }, {
       test: /\.html$/,
       use: 'html-loader',
       include: [
-        helpers.root('view'),
-        helpers.root('index.html')
+        helpers.root('src')
       ]
     }, {
       test: /\.(png|jpe?g|gif|ico|svg)$/,
       use: DEVELOPMENT ?
-        'url-loader?limit=50000&name=images/[name].[hash].[ext]' : 'url-loader?limit=50000&name=images/[name].[hash].[ext]&publicPath=/dist/',
-      include: [helpers.root('images'), helpers.root('node_modules/admin-lte')]
+        'url-loader?limit=50000&name=assets/images/[name].[hash].[ext]' : 'url-loader?limit=50000&name=assets/images/[name].[hash].[ext]&publicPath=/dist/',
+      include: [helpers.root('assets/images'), helpers.root('node_modules/admin-lte')]
     }, {
       test: /\.(ttf|eot|woff|woff2|svg)$/,
       use: DEVELOPMENT ?
-        'file-loader?name=fonts/[name].[ext]' : 'file-loader?name=fonts/[name].[ext]&publicPath=/dist/',
+        'file-loader?name=assets/fonts/[name].[ext]' : 'file-loader?name=assets/fonts/[name].[ext]&publicPath=/dist/',
       include: [
-        helpers.root('fonts'),
+        helpers.root('assets/fonts'),
         helpers.root('node_modules/font-awesome/fonts'),
         helpers.root('node_modules/bootstrap/dist/fonts')
       ]
@@ -94,22 +104,47 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
 
+    new LodashModuleReplacementPlugin({
+      'collections': true,
+      'paths': true
+    }),
+
     // JS打包压缩
-    new UglifyJSPlugin({
-      sourceMap: DEVELOPMENT,
-      beautify: DEVELOPMENT, // 最紧凑的输出
-      compress: {
-        warnings: DEVELOPMENT,
-        drop_debugger: DEVELOPMENT,
-        screw_ie8: true
-      },
-      mangle: {
-        // Skip mangling these
-        except: ['$super', '$', 'exports', 'require'],
-        screw_ie8: true,
-        keep_fnames: true
-      },
-      comments: DEVELOPMENT
+    // new UglifyJSPlugin({
+    //   sourceMap: DEVELOPMENT,
+    //   beautify: DEVELOPMENT, // 最紧凑的输出
+    //   compress: {
+    //     warnings: DEVELOPMENT,
+    //     drop_debugger: DEVELOPMENT,
+    //     screw_ie8: true
+    //   },
+    //   mangle: {
+    //     // Skip mangling these
+    //     except: ['$super', '$', 'exports', 'require'],
+    //     screw_ie8: true,
+    //     keep_fnames: true
+    //   },
+    //   comments: DEVELOPMENT
+    // }),
+
+    new ParallelUglifyPlugin({
+      workerCount: os.cpus().length,
+      cacheDir: '.cache/',
+      uglifyJS: {
+        compress: {
+          warnings: DEVELOPMENT,
+          drop_debugger: DEVELOPMENT,
+          drop_console: true
+        },
+        comments: DEVELOPMENT,
+        sourceMap: true,
+        mangle: {
+          // Skip mangling these
+          except: ['$super', '$', 'exports', 'require'],
+          screw_ie8: true,
+          keep_fnames: true
+        }
+      }
     }),
 
     // 待补充资料
@@ -128,7 +163,9 @@ module.exports = {
 
     new HtmlWebpackPlugin({ // 可以自动注入 script, link标签
       // inject: true,
-      template: 'index.html'
+      filename: 'index.html',
+      template: 'src/index.html',
+      chunks: ['polyfills', 'vendor', 'app']
     }),
 
     // Don't recommend

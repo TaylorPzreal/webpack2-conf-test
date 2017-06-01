@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
 const helpers = require('./helpers');
@@ -27,12 +27,13 @@ module.exports = webpackMerge(commonConfig, {
         {
           loader: 'postcss-loader',
           options: {
-            plugins: function() {
+            plugins() {
               return [
                 require('precss'),
                 require('autoprefixer')
               ];
-            }
+            },
+            sourceMap: true
           }
         }, {
           loader: 'sass-loader',
@@ -41,7 +42,7 @@ module.exports = webpackMerge(commonConfig, {
           }
         }
       ],
-      include: [helpers.root('scss')]
+      include: [helpers.root('src'), helpers.root('assets/scss')]
     }, {
       test: /\.css$/,
       use: [
@@ -55,12 +56,13 @@ module.exports = webpackMerge(commonConfig, {
         {
           loader: 'postcss-loader',
           options: {
-            plugins: function() {
+            plugins() {
               return [
                 require('precss'),
                 require('autoprefixer')
               ];
-            }
+            },
+            sourceMap: true
           }
         }
       ]

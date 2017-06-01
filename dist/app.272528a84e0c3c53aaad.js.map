@@ -1,0 +1,1 @@
+{"version":3,"file":"app.272528a84e0c3c53aaad.js","sources":["webpack:///./src/public/js/app.bootstrap.js"],"sourcesContent":["// 手动加载Angular\nimport './app.module';\nangular.element(document).ready(() => {\n  angular.bootstrap(document, ['app']);\n});\n\n\n\n// WEBPACK FOOTER //\n// ./src/public/js/app.bootstrap.js"],"mappings":";AAAA","sourceRoot":""}
