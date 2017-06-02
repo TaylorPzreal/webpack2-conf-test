@@ -13,7 +13,7 @@ Webpack2在项目中的配置实践 :clap::clap::clap:
 
 ***
 ### 三、测试截图
-![](images/FireShot Capture 19 - webpack2-conf-test - http___localhost_3000_.png)
+![test](assets/images/FireShot Capture 19 - webpack2-conf-test - http___localhost_3000_.png)
 
 ### 四、讨论
 
