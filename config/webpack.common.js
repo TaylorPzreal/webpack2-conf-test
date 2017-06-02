@@ -22,9 +22,9 @@ module.exports = {
   devtool: DEVELOPMENT ? 'cheap-eval-source-map' : 'cheap-module-source-map',
 
   entry: {
-    'polyfills': helpers.root('src/public', 'js', 'polyfills.js'),
-    'vendor': helpers.root('src/public', 'js', 'vendor.js'),
-    'app': helpers.root('src/public', 'js', 'app.bootstrap.js')
+    'polyfills': helpers.root('src', 'public', 'polyfills.js'),
+    'vendor': helpers.root('src', 'public', 'vendor.js'),
+    'app': helpers.root('src', 'public', 'app.bootstrap.js')
   },
 
   output: {

@@ -1,3 +1,0 @@
-/*! Copyright www.honeymorning.com 2017 inc. */
-webpackJsonp([0],{"./assets/scss/common.scss":function(s,exports){},"./src/public/js/app.bootstrap.js":function(s,o,c){"use strict";Object.defineProperty(o,"__esModule",{value:!0});c("./src/public/js/app.module.js");angular.element(document).ready(function(){angular.bootstrap(document,["app"])})},"./src/public/js/app.module.js":function(s,o,c){"use strict";var e=c("./assets/scss/common.scss"),n=(c.n(e),c("./node_modules/angular/index.js"));c.n(n).a.module("app",[]).controller("homeCtrl",["$scope",function(s){}])}},["./src/public/js/app.bootstrap.js"]);
-//# sourceMappingURL=app.272528a84e0c3c53aaad.js.map
