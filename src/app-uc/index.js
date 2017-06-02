@@ -1,5 +1,10 @@
 import angular from 'angular';
 
-const app = angular.module('app-uc', []);
+import Routing from './js/routes';
+import './js/controllers';
+
+const app = angular.module('app-uc', ['app-uc.controllers']);
+
+app.config(Routing);
 
 export default app;

@@ -1,1 +1,0 @@
-{"version":3,"file":"app.67fd2d4654b34aeac573.js","sources":["webpack:///./src/app-mc/index.js"],"sourcesContent":["import angular from 'angular';\n\nconst app = angular.module('app-mc', []);\n\nexport default app;\n\n\n\n// WEBPACK FOOTER //\n// ./src/app-mc/index.js"],"mappings":";AAEA","sourceRoot":""}

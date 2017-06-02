@@ -9,5 +9,14 @@ import '../app-public';
 import '../app-uc';
 import '../app-mc';
 
+import Routing from './app.route';
+import AppCtrl from './app.controller';
+
 // 导入所有的angular 的 业务module 通用模块，个人中心，管理中心，博客。。。
-const app = angular.module('app', ['app-public', 'app-uc', 'app-mc']);
+const app = angular.module('app', ['app-public', 'app-uc', 'app-mc', 'ui.router']);
+
+// ui-router路由
+app.config(Routing);
+
+// 根Controller
+app.controller('AppCtrl', AppCtrl);

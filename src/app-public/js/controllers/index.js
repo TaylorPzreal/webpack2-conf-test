@@ -1,10 +1,14 @@
-
 import angular from 'angular';
 
-import appCtrl from './app.ctrl';
+import SolutionCtrl from './solution.ctrl';
+import ProductCtrl from './product.ctrl';
+import AboutCtrl from './about.ctrl';
 
 const app = angular.module('public.controllers', []);
 
-app.controller('appCtrl', appCtrl);
+app
+  .controller('SolutionCtrl', SolutionCtrl)
+  .controller('ProductCtrl', ProductCtrl)
+  .controller('AboutCtrl', AboutCtrl);
 
 export default app;
