@@ -3,7 +3,8 @@
 import 'jquery';
 import 'bootstrap';
 import 'angular';
-import 'angular-ui-router';
+// import 'angular-ui-router';
+import 'oclazyload';
 
 
 // 这里引入第三方样式

@@ -106,6 +106,7 @@ module.exports = {
 
     new LodashModuleReplacementPlugin({
       'collections': true,
+      'shorthands': true,
       'paths': true
     }),
 

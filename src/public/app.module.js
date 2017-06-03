@@ -4,19 +4,15 @@ import '../../assets/scss/common.scss';
 
 // Angular项目入口文件
 import angular from 'angular';
+// require('oclazyload');
+require('angular-ui-router');
 
-import '../app-public';
-import '../app-uc';
-import '../app-mc';
-
-import Routing from './app.route';
 import AppCtrl from './app.controller';
 
-// 导入所有的angular 的 业务module 通用模块，个人中心，管理中心，博客。。。
-const app = angular.module('app', ['app-public', 'app-uc', 'app-mc', 'ui.router']);
+// 导入所有的angular
+const app = angular.module('app', ['ui.router', 'oc.lazyLoad']);
+
+app.controller('AppCtrl', AppCtrl);
 
 // ui-router路由
-app.config(Routing);
-
-// 根Controller
-app.controller('AppCtrl', AppCtrl);
+require('./app.route').default(app, angular);
