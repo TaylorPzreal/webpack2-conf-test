@@ -1,4 +1,6 @@
-controller.$inject = ['$scope'];
-export default function controller($scope) {
-  console.warn('用户信息');
-}
+export default (ngModule) => {
+
+  ngModule.controller('UCUserinfoCtrl', ['$scope', ($scope) => {
+    console.warn('User info');
+  }]);
+};

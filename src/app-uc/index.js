@@ -1,10 +1,9 @@
-import angular from 'angular';
+export default (angularRef) => {
 
-import Routing from './js/routes';
-import './js/controllers';
+  const UCNgModule = angularRef.module('app-uc', []);
 
-const app = angular.module('app-uc', ['app-uc.controllers']);
+  // 引入各个Ctrl
+  require('./js/controllers/base-module.ctrl').default(UCNgModule);
+  require('./js/controllers/userinfo.ctrl').default(UCNgModule);
 
-app.config(Routing);
-
-export default app;
+};

@@ -17,8 +17,8 @@ export default (ngModuleRef, angularRef) => {
         $ocLazyLoadProvider
       ) => {
 
-        // $locationProvider.html5Mode(false); // 开启H5模式URI
-        // $logProvider.debugEnabled(true); //log 日志
+        $locationProvider.html5Mode(false); // 开启H5模式URI
+        $logProvider.debugEnabled(true); //log 日志
         $locationProvider.hashPrefix('!');
 
         $qProvider.errorOnUnhandledRejections(false);
@@ -38,14 +38,9 @@ export default (ngModuleRef, angularRef) => {
 
               const deferred = $q.defer();
 
-              // require.ensure(['../app-home/index.html'], () => {
-              //   const template = require('../app-home/index.html');
-              //   deferred.resolve(template);
-              // });
-
-              import('../app-home/index.js').then(() => {
+              require.ensure(['../app-home/index.html'], () => {
                 const template = require('../app-home/index.html');
-                deferred.resolve(template); 
+                deferred.resolve(template);
               });
 
               return deferred.promise;
@@ -56,19 +51,88 @@ export default (ngModuleRef, angularRef) => {
                 const deferred = $q.defer();
 
                 require.ensure([], () => {
-                  const homeModule = require('../app-home/index.js').default(angularRef);
+                  const module = require('../app-home/index.js').default(angularRef);
                   $ocLazyLoad.load({
                     name: 'app-home'
                   });
-                  deferred.resolve(homeModule);
+                  deferred.resolve(module);
                 });
 
                 return deferred.promise;
               }]
             }
+          })
+          .state({
+            name: 'UserCenter',
+            url: '/uc',
+            controller: 'BaseModuleCtrl',
+            templateProvider: ['$q', ($q) => {
+
+              const deferred = $q.defer();
+
+              require.ensure(['../app-uc/view/base-module.html'], () => {
+                const template = require('../app-uc/view/base-module.html');
+                deferred.resolve(template);
+              });
+
+              return deferred.promise;
+            }],
+            resolve: {
+              appUC: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
+
+                const deferred = $q.defer();
+
+                require.ensure([], () => {
+                  const module = require('../app-uc/index').default(angularRef);
+                  $ocLazyLoad.load({
+                    name: 'app-uc'
+                  });
+                  deferred.resolve(module);
+                });
+
+                return deferred.promise;
+              }]
+            }
+          })
+          .state({
+            name: 'UserCenter.Userinfo',
+            url: '/info',
+            views: {
+              'usercenter@UserCenter': {
+
+                controller: 'UCUserinfoCtrl',
+                templateProvider: ['$q', ($q) => {
+
+                  const deferred = $q.defer();
+
+                  require.ensure(['../app-uc/view/userinfo.html'], () => {
+                    const template = require('../app-uc/view/userinfo.html');
+                    deferred.resolve(template);
+                  });
+
+                  return deferred.promise;
+                }],
+                resolve: {
+                  appUC: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {
+
+                    const deferred = $q.defer();
+
+                    require.ensure([], () => {
+                      const module = require('../app-uc/index').default(angularRef);
+                      $ocLazyLoad.load({
+                        name: 'app-uc'
+                      });
+                      deferred.resolve(module);
+                    });
+
+                    return deferred.promise;
+                  }]
+                }
+              }
+            }
           });
 
-        // $urlRouterProvider.when('', '');
+        $urlRouterProvider.when('', '');
         $urlRouterProvider.otherwise(''); //错误路由重定向
 
       }
