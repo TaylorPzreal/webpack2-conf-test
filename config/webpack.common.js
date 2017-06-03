@@ -141,7 +141,7 @@ module.exports = {
         sourceMap: true,
         mangle: {
           // Skip mangling these
-          except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad'],
+          except: ['$super', '$', 'exports', 'require', '$q', '$ocLazyLoad', 'import'],
           screw_ie8: true,
           keep_fnames: true
         }

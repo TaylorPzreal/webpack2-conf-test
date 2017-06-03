@@ -38,9 +38,14 @@ export default (ngModuleRef, angularRef) => {
 
               const deferred = $q.defer();
 
-              require.ensure(['../app-home/index.html'], () => {
+              // require.ensure(['../app-home/index.html'], () => {
+              //   const template = require('../app-home/index.html');
+              //   deferred.resolve(template);
+              // });
+
+              import('../app-home/index.js').then(() => {
                 const template = require('../app-home/index.html');
-                deferred.resolve(template);
+                deferred.resolve(template); 
               });
 
               return deferred.promise;

@@ -4,20 +4,23 @@
     "node": true,
     "es6": true
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
-    "allowImportExportEverywhere": true,
+    "allowImportExportEverywhere": false,
     "ecmaFeatures": {
       "jsx": true,
       "modules": true
     }
   },
   "globals": {
-    "$": true
+    "$": true,
+    "import": true
   },
   "rules": {
-"camelcase": "error",
+    "strict": 0,
+    "camelcase": "error",
     "curly": ["error", "all"],
     "brace-style": ["error", "1tbs"],
     "quotes": ["error", "single"],
@@ -51,10 +54,10 @@
     "no-param-reassign": ["error", {
       "props": false
     }],
-   /* "prefer-arrow-callback": ["error", {
-      "allowNamedFunctions": true,
-      "allowUnboundThis": true
-    }],*/
+    /* "prefer-arrow-callback": ["error", {
+       "allowNamedFunctions": true,
+       "allowUnboundThis": true
+     }],*/
     "arrow-spacing": ["error", {
       "before": true,
       "after": true
