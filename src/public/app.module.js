@@ -4,7 +4,7 @@ import '../../assets/scss/common.scss';
 
 // Angular项目入口文件
 import angular from 'angular';
-// require('oclazyload');
+
 require('angular-ui-router');
 
 import AppCtrl from './app.controller';
