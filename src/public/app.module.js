@@ -16,3 +16,4 @@ app.controller('AppCtrl', AppCtrl);
 
 // ui-router路由
 require('./app.route').default(app, angular);
+require('../app-uc/js/routes').default(app, angular);
