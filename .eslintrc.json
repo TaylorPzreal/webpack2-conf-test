@@ -78,9 +78,9 @@
     "dot-notation": "error",
     "no-undef": "error",
     "one-var": ["error", "never"],
-    "no-plusplus": ["error", {
-      "allowForLoopAfterthoughts": true
-    }],
+    // "no-plusplus": ["error", {
+    //   "allowForLoopAfterthoughts": true
+    // }],
     "eqeqeq": ["error", "always"]
   }
 }

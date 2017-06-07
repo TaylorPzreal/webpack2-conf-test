@@ -1,0 +1,1 @@
+{"version":3,"file":"2.28f8b60c53f232ae18d3.chunk.js","sources":["webpack:///./src/app-uc/view/userinfo.html"],"sourcesContent":["module.exports = \"<section> 个人基本信息 </section>\";\n\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/app-uc/view/userinfo.html\n// module id = ./src/app-uc/view/userinfo.html\n// module chunks = 2"],"mappings":";AAAA","sourceRoot":""}
