@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/app-uc/js/routes/index.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/TaylorPzreal/webpack2-conf-test" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-home</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-apphome">apphome</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-mc</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public/js/controllers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public/js/routes</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-routing">routing</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc/js/controllers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-basemodule">basemodule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-collection">collection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-userinfo">userinfo</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc/js/routes</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">public</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-app">app</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/app-uc/js/routes/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default (ngModuleRef, angularRef) =&gt; {
+  ngModuleRef.config([
+      &apos;$urlRouterProvider&apos;,
+      &apos;$locationProvider&apos;,
+      &apos;$stateProvider&apos;,
+      &apos;$logProvider&apos;,
+      &apos;$qProvider&apos;,
+      &apos;$compileProvider&apos;,
+      &apos;$ocLazyLoadProvider&apos;,
+      (
+        $urlRouterProvider,
+        $locationProvider,
+        $stateProvider,
+        $logProvider,
+        $qProvider,
+        $compileProvider,
+        $ocLazyLoadProvider
+      ) =&gt; {
+
+        $locationProvider.html5Mode(false); // &#x5F00;&#x542F;H5&#x6A21;&#x5F0F;URI
+        $logProvider.debugEnabled(true); //log &#x65E5;&#x5FD7;
+        $locationProvider.hashPrefix(&apos;!&apos;);
+
+        $qProvider.errorOnUnhandledRejections(false);
+        $compileProvider.debugInfoEnabled(false);
+
+        $ocLazyLoadProvider.config({
+          debug: true,
+          events: true
+        });
+
+        $stateProvider
+          .state({
+            name: &apos;UserCenter&apos;,
+            url: &apos;/uc&apos;,
+            controller: &apos;BaseModuleCtrl&apos;,
+            templateProvider: [&apos;$q&apos;, ($q) =&gt; {
+
+              const deferred = $q.defer();
+
+              require.ensure([&apos;../../view/base-module.html&apos;], () =&gt; {
+                const template = require(&apos;../../view/base-module.html&apos;);
+                deferred.resolve(template);
+              });
+
+              return deferred.promise;
+            }],
+            resolve: {
+              appUC: [&apos;$q&apos;, &apos;$ocLazyLoad&apos;, ($q, $ocLazyLoad) =&gt; {
+
+                const deferred = $q.defer();
+
+                require.ensure([], () =&gt; {
+                  const module = require(&apos;../../index&apos;).default(angularRef);
+                  $ocLazyLoad.load({
+                    name: &apos;app-uc&apos;
+                  });
+                  deferred.resolve(module);
+                });
+
+                return deferred.promise;
+              }]
+            }
+          })
+          .state({
+            name: &apos;UserCenter.Userinfo&apos;,
+            url: &apos;/info&apos;,
+            views: {
+              &apos;usercenter@UserCenter&apos;: {
+
+                controller: &apos;UCUserinfoCtrl&apos;,
+                templateProvider: [&apos;$q&apos;, ($q) =&gt; {
+
+                  const deferred = $q.defer();
+
+                  require.ensure([&apos;../../view/userinfo.html&apos;], () =&gt; {
+                    const template = require(&apos;../../view/userinfo.html&apos;);
+                    deferred.resolve(template);
+                  });
+
+                  return deferred.promise;
+                }],
+                resolve: {
+                  appUC: [&apos;$q&apos;, &apos;$ocLazyLoad&apos;, ($q, $ocLazyLoad) =&gt; {
+
+                    const deferred = $q.defer();
+
+                    require.ensure([], () =&gt; {
+                      const module = require(&apos;../../index&apos;).default(angularRef);
+                      $ocLazyLoad.load({
+                        name: &apos;app-uc&apos;
+                      });
+                      deferred.resolve(module);
+                    });
+
+                    return deferred.promise;
+                  }]
+                }
+              }
+            }
+          })
+           .state({
+            name: &apos;UserCenter.Collection&apos;,
+            url: &apos;/collection&apos;,
+            views: {
+              &apos;usercenter@UserCenter&apos;: {
+
+                controller: &apos;UCCollectionCtrl&apos;,
+                templateProvider: [&apos;$q&apos;, ($q) =&gt; {
+
+                  const deferred = $q.defer();
+
+                  require.ensure([&apos;../../view/collection.html&apos;], () =&gt; {
+                    const template = require(&apos;../../view/collection.html&apos;);
+                    deferred.resolve(template);
+                  });
+
+                  return deferred.promise;
+                }],
+                resolve: {
+                  appUC: [&apos;$q&apos;, &apos;$ocLazyLoad&apos;, ($q, $ocLazyLoad) =&gt; {
+
+                    const deferred = $q.defer();
+
+                    require.ensure([], () =&gt; {
+                      const module = require(&apos;../../index&apos;).default(angularRef);
+                      $ocLazyLoad.load({
+                        name: &apos;app-uc&apos;
+                      });
+                      deferred.resolve(module);
+                    });
+
+                    return deferred.promise;
+                  }]
+                }
+              }
+            }
+          });
+
+        $urlRouterProvider.when(&apos;&apos;, &apos;&apos;);
+        $urlRouterProvider.otherwise(&apos;&apos;); //&#x9519;&#x8BEF;&#x8DEF;&#x7531;&#x91CD;&#x5B9A;&#x5411;
+
+      }
+    ])
+    .run([&apos;$templateCache&apos;, ($templateCache) =&gt; {
+      $templateCache.removeAll();
+    }]);
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

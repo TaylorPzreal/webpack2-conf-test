@@ -4,6 +4,10 @@ export default (ngModule) => {
     console.warn('User info');
 
     // some test code
+
+    /**
+     * Person 对象
+     */
     function Person() {
 
       this.name = null;

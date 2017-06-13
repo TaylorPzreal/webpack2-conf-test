@@ -1,0 +1,1421 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/app-home/app-home.ctrl.js",
+    "content": "export default (ngModule) => {\n\n  ngModule.controller('AppHomeCtrl', ['$scope', ($scope) => {\n    $scope.title = 'home';\n    console.warn(' 首页 index 哈哈哈');\n  }]);\n};\n",
+    "static": true,
+    "longname": "src/app-home/app-home.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "function",
+    "name": "apphome",
+    "memberof": "src/app-home/app-home.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-home/app-home.ctrl.js~apphome",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-home/app-home.ctrl.js",
+    "importStyle": "apphome",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModule",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 2,
+    "kind": "file",
+    "name": "src/app-home/index.js",
+    "content": "export default (angularRef) => {\n  const HomeNgModule = angularRef.module('app-home', []);\n\n  require('./app-home.ctrl').default(HomeNgModule);\n};",
+    "static": true,
+    "longname": "src/app-home/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 3,
+    "kind": "function",
+    "name": "index",
+    "memberof": "src/app-home/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-home/index.js~index",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-home/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "angularRef",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 4,
+    "kind": "file",
+    "name": "src/app-mc/index.js",
+    "content": "import angular from 'angular';\n\nconst app = angular.module('app-mc', []);\n\nexport default app;\n",
+    "static": true,
+    "longname": "src/app-mc/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "name": "app",
+    "memberof": "src/app-mc/index.js",
+    "static": true,
+    "longname": "src/app-mc/index.js~app",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-mc/index.js",
+    "importStyle": "app",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "file",
+    "name": "src/app-public/index.js",
+    "content": "import angular from 'angular';\n\nimport Routing from './js/routes';\n\nimport './js/controllers';\n\nconst app = angular.module('app-public', ['public.controllers', 'ui.router']);\n\napp.config(Routing);\n\nexport default app;\n",
+    "static": true,
+    "longname": "src/app-public/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "name": "app",
+    "memberof": "src/app-public/index.js",
+    "static": true,
+    "longname": "src/app-public/index.js~app",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/index.js",
+    "importStyle": "app",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "file",
+    "name": "src/app-public/js/controllers/about.ctrl.js",
+    "content": "controller.$inject = ['$scope'];\nexport default function controller($scope) {\n\n  console.warn('About Ctrl');\n\n}\n",
+    "static": true,
+    "longname": "src/app-public/js/controllers/about.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 9,
+    "kind": "function",
+    "name": "controller",
+    "memberof": "src/app-public/js/controllers/about.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-public/js/controllers/about.ctrl.js~controller",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/js/controllers/about.ctrl.js",
+    "importStyle": "controller",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "$scope",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 10,
+    "kind": "file",
+    "name": "src/app-public/js/controllers/index.js",
+    "content": "import angular from 'angular';\n\nimport SolutionCtrl from './solution.ctrl';\nimport ProductCtrl from './product.ctrl';\nimport AboutCtrl from './about.ctrl';\n\nconst app = angular.module('public.controllers', []);\n\napp\n  .controller('SolutionCtrl', SolutionCtrl)\n  .controller('ProductCtrl', ProductCtrl)\n  .controller('AboutCtrl', AboutCtrl);\n\nexport default app;\n",
+    "static": true,
+    "longname": "src/app-public/js/controllers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 11,
+    "kind": "variable",
+    "name": "app",
+    "memberof": "src/app-public/js/controllers/index.js",
+    "static": true,
+    "longname": "src/app-public/js/controllers/index.js~app",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/js/controllers/index.js",
+    "importStyle": "app",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "file",
+    "name": "src/app-public/js/controllers/product.ctrl.js",
+    "content": "controller.$inject = ['$scope'];\nexport default function controller($scope) {\n\n  console.warn('Product Ctrl');\n\n}\n",
+    "static": true,
+    "longname": "src/app-public/js/controllers/product.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 13,
+    "kind": "function",
+    "name": "controller",
+    "memberof": "src/app-public/js/controllers/product.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-public/js/controllers/product.ctrl.js~controller",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/js/controllers/product.ctrl.js",
+    "importStyle": "controller",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "$scope",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 14,
+    "kind": "file",
+    "name": "src/app-public/js/controllers/solution.ctrl.js",
+    "content": "controller.$inject = ['$scope'];\nexport default function controller($scope) {\n\n  console.warn('Home Ctrl');\n\n}\n",
+    "static": true,
+    "longname": "src/app-public/js/controllers/solution.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 15,
+    "kind": "function",
+    "name": "controller",
+    "memberof": "src/app-public/js/controllers/solution.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-public/js/controllers/solution.ctrl.js~controller",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/js/controllers/solution.ctrl.js",
+    "importStyle": "controller",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "$scope",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 16,
+    "kind": "file",
+    "name": "src/app-public/js/routes/index.js",
+    "content": "routing.$inject = [\n  '$urlRouterProvider',\n  '$locationProvider',\n  '$stateProvider',\n  '$logProvider'\n];\n\nexport default function routing($urlRouterProvider, $locationProvider, $stateProvider, $logProvider) {\n  $locationProvider.html5Mode(false); // 开启H5模式URI\n  $logProvider.debugEnabled(true); //log 日志\n\n  $stateProvider\n    .state({\n      name: 'Solution',\n      url: '/solution',\n      templateUrl: 'src/app-public/view/solution.html',\n      controller: 'SolutionCtrl'\n    })\n    .state({\n      name: 'Product',\n      url: '/product',\n      templateUrl: 'src/app-public/view/product.html',\n      controller: 'ProductCtrl'\n    })\n    .state({\n      name: 'About',\n      url: '/about',\n      templateUrl: 'src/app-public/view/about.html',\n      controller: 'AboutCtrl'\n    });\n\n  $urlRouterProvider.otherwise(''); //错误路由重定向\n\n}\n",
+    "static": true,
+    "longname": "src/app-public/js/routes/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 17,
+    "kind": "function",
+    "name": "routing",
+    "memberof": "src/app-public/js/routes/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-public/js/routes/index.js~routing",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-public/js/routes/index.js",
+    "importStyle": "routing",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "$urlRouterProvider",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "$locationProvider",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "$stateProvider",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "$logProvider",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 18,
+    "kind": "file",
+    "name": "src/app-uc/index.js",
+    "content": "export default (angularRef) => {\n\n  const UCNgModule = angularRef.module('app-uc', []);\n\n  // 引入各个Ctrl\n  require('./js/controllers/base-module.ctrl').default(UCNgModule);\n  require('./js/controllers/userinfo.ctrl').default(UCNgModule);\n  require('./js/controllers/collection.ctrl').default(UCNgModule);\n\n};\n",
+    "static": true,
+    "longname": "src/app-uc/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 19,
+    "kind": "function",
+    "name": "index",
+    "memberof": "src/app-uc/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-uc/index.js~index",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-uc/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "angularRef",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 20,
+    "kind": "file",
+    "name": "src/app-uc/js/controllers/base-module.ctrl.js",
+    "content": "export default (ngModule) => {\n\n  ngModule.controller('BaseModuleCtrl', ['$scope', ($scope) => {\n    console.warn('基本个人中心根模型信息');\n  }]);\n\n\n  // Singleton example.\n  const singleton = (() => {\n\n    // Instance stores  a referene to the Singleton.\n    let instance;\n\n    function init() {\n\n      function privateMethod() {\n        console.warn('this is private methoe.');\n      }\n\n      const privateVariable = 'this is private variable.';\n      const privateNumber = Math.random();\n\n      return {\n        publicMethod: () => {\n          console.warn('this is public method.');\n        },\n        publicProperty: 'this is public property.',\n        getRandomNumber: () => privateNumber\n      };\n    }\n\n    return {\n      initInstance: () => {\n        if(!instance) {\n          instance = init();\n        }\n        return instance;\n      }\n    };\n\n  })();\n\n  const singleton1 = singleton.initInstance();\n  const singleton2 = singleton.initInstance();\n\n  console.warn('singleton test: ', singleton1.getRandomNumber === singleton2.getRandomNumber);\n\n\n  // Publish/Subscribe Implementation\n  const pubsub = {};\n\n  ((myObject) => {\n\n    // Storage for topics that can be broadcast or listened to.\n    const topics = {};\n    let subUid = -1;\n\n    // Publish or broadcast events of interest with a specific topic name and arguments such as the data to pass alone.\n    myObject.publish = (topic, args) => {\n      if (!topics[topic]) {\n        return  false;\n      }\n\n      const subscribers = topics[topic];\n      let len = subscribers ? subscribers.length : 0;\n\n      while(len--) {\n        subscribers[len].func(topic, args);\n      }\n\n      return this;\n    };\n\n      // Subscribe to events of interest with a specific topic name and a callback function,\n      // to be executed  when the topic/event is observed.\n    myObject.subscribe = (topic, func) => {\n\n      if (!topics[topic]) {\n        topics[topic] = [];\n      }\n\n      const token = (++subUid).toString();\n      topics[topic].push({\n        token,\n        func\n      });\n      return token;\n    };\n\n    // Unsubscribe from a specific topic, based on tokenized reference to the subscription.\n    myObject.unsubscribe = (token) => {\n\n      for (const m in topics) {\n        if (topics[m]) {\n          for(let i = 0, j = topics[m].length; i < j; i++) {\n            if (topics[m][i].token === token) {\n              topics[m].splice(i, 1);\n              return token;\n            }\n          }\n        }\n      }\n      return this;\n    };\n\n  })(pubsub);\n\n  // 订阅\n  const subscription = pubsub.subscribe('inbox/newMessage', (topics, data) => {\n    console.warn('Logging', topics, ': ', data);\n  });\n\n  // 发布\n  pubsub.publish('inbox/newMessage', 'hello public/subscribe world.');\n\n  setTimeout(() => {\n    pubsub.publish('inbox/newMessage', [1, 2, 'uuu']);\n\n    pubsub.publish('inbox/newMessage', {\n      name: 'Morning',\n      age: 18\n    });\n  }, 2000);\n\n  setTimeout(() => {\n    pubsub.unsubscribe(subscription);\n\n    pubsub.publish('inbox/newMessage', 'sent message ... ');\n  }, 5000);\n};\n",
+    "static": true,
+    "longname": "src/app-uc/js/controllers/base-module.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 21,
+    "kind": "function",
+    "name": "basemodule",
+    "memberof": "src/app-uc/js/controllers/base-module.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-uc/js/controllers/base-module.ctrl.js~basemodule",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-uc/js/controllers/base-module.ctrl.js",
+    "importStyle": "basemodule",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModule",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "name": "src/app-uc/js/controllers/collection.ctrl.js",
+    "content": "export default (ngModule) => {\n  ngModule.controller('UCCollectionCtrl', ['$scope', ($scope) => {\n    console.warn('收藏信息');\n  }]);\n};\n",
+    "static": true,
+    "longname": "src/app-uc/js/controllers/collection.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 23,
+    "kind": "function",
+    "name": "collection",
+    "memberof": "src/app-uc/js/controllers/collection.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-uc/js/controllers/collection.ctrl.js~collection",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-uc/js/controllers/collection.ctrl.js",
+    "importStyle": "collection",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModule",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 24,
+    "kind": "file",
+    "name": "src/app-uc/js/controllers/userinfo.ctrl.js",
+    "content": "export default (ngModule) => {\n\n  ngModule.controller('UCUserinfoCtrl', ['$scope', ($scope) => {\n    console.warn('User info');\n\n    // some test code\n\n    /**\n     * Person 对象\n     */\n    function Person() {\n\n      this.name = null;\n      this.age = null;\n      this.location = null;\n      this.phone = null;\n    }\n\n    Person.prototype.setInfo = (obj) => {\n\n      this.name = obj.name;\n      this.age = obj.age;\n      this.location = obj.location;\n      this.phone = obj.phone;\n    };\n\n    Person.prototype.getInfo = () => {\n\n      console.warn(this.name, this.age, this.location, this.phone);\n    };\n\n    const person1 = new Person();\n    person1.setInfo({\n      name: '小明',\n      age: 24,\n      location: 'Beijing',\n      phone: 13344445555\n    });\n    person1.getInfo();\n\n    const person2 = new Person();\n    person2.setInfo({\n      name: '小李',\n      age: 20,\n      location: 'US',\n      phone: 15546467878\n    });\n    person2.getInfo();\n\n  }]);\n};\n",
+    "static": true,
+    "longname": "src/app-uc/js/controllers/userinfo.ctrl.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 25,
+    "kind": "function",
+    "name": "userinfo",
+    "memberof": "src/app-uc/js/controllers/userinfo.ctrl.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-uc/js/controllers/userinfo.ctrl.js~userinfo",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-uc/js/controllers/userinfo.ctrl.js",
+    "importStyle": "userinfo",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModule",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 26,
+    "kind": "file",
+    "name": "src/app-uc/js/routes/index.js",
+    "content": "export default (ngModuleRef, angularRef) => {\n  ngModuleRef.config([\n      '$urlRouterProvider',\n      '$locationProvider',\n      '$stateProvider',\n      '$logProvider',\n      '$qProvider',\n      '$compileProvider',\n      '$ocLazyLoadProvider',\n      (\n        $urlRouterProvider,\n        $locationProvider,\n        $stateProvider,\n        $logProvider,\n        $qProvider,\n        $compileProvider,\n        $ocLazyLoadProvider\n      ) => {\n\n        $locationProvider.html5Mode(false); // 开启H5模式URI\n        $logProvider.debugEnabled(true); //log 日志\n        $locationProvider.hashPrefix('!');\n\n        $qProvider.errorOnUnhandledRejections(false);\n        $compileProvider.debugInfoEnabled(false);\n\n        $ocLazyLoadProvider.config({\n          debug: true,\n          events: true\n        });\n\n        $stateProvider\n          .state({\n            name: 'UserCenter',\n            url: '/uc',\n            controller: 'BaseModuleCtrl',\n            templateProvider: ['$q', ($q) => {\n\n              const deferred = $q.defer();\n\n              require.ensure(['../../view/base-module.html'], () => {\n                const template = require('../../view/base-module.html');\n                deferred.resolve(template);\n              });\n\n              return deferred.promise;\n            }],\n            resolve: {\n              appUC: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {\n\n                const deferred = $q.defer();\n\n                require.ensure([], () => {\n                  const module = require('../../index').default(angularRef);\n                  $ocLazyLoad.load({\n                    name: 'app-uc'\n                  });\n                  deferred.resolve(module);\n                });\n\n                return deferred.promise;\n              }]\n            }\n          })\n          .state({\n            name: 'UserCenter.Userinfo',\n            url: '/info',\n            views: {\n              'usercenter@UserCenter': {\n\n                controller: 'UCUserinfoCtrl',\n                templateProvider: ['$q', ($q) => {\n\n                  const deferred = $q.defer();\n\n                  require.ensure(['../../view/userinfo.html'], () => {\n                    const template = require('../../view/userinfo.html');\n                    deferred.resolve(template);\n                  });\n\n                  return deferred.promise;\n                }],\n                resolve: {\n                  appUC: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {\n\n                    const deferred = $q.defer();\n\n                    require.ensure([], () => {\n                      const module = require('../../index').default(angularRef);\n                      $ocLazyLoad.load({\n                        name: 'app-uc'\n                      });\n                      deferred.resolve(module);\n                    });\n\n                    return deferred.promise;\n                  }]\n                }\n              }\n            }\n          })\n           .state({\n            name: 'UserCenter.Collection',\n            url: '/collection',\n            views: {\n              'usercenter@UserCenter': {\n\n                controller: 'UCCollectionCtrl',\n                templateProvider: ['$q', ($q) => {\n\n                  const deferred = $q.defer();\n\n                  require.ensure(['../../view/collection.html'], () => {\n                    const template = require('../../view/collection.html');\n                    deferred.resolve(template);\n                  });\n\n                  return deferred.promise;\n                }],\n                resolve: {\n                  appUC: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {\n\n                    const deferred = $q.defer();\n\n                    require.ensure([], () => {\n                      const module = require('../../index').default(angularRef);\n                      $ocLazyLoad.load({\n                        name: 'app-uc'\n                      });\n                      deferred.resolve(module);\n                    });\n\n                    return deferred.promise;\n                  }]\n                }\n              }\n            }\n          });\n\n        $urlRouterProvider.when('', '');\n        $urlRouterProvider.otherwise(''); //错误路由重定向\n\n      }\n    ])\n    .run(['$templateCache', ($templateCache) => {\n      $templateCache.removeAll();\n    }]);\n};\n",
+    "static": true,
+    "longname": "src/app-uc/js/routes/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 27,
+    "kind": "function",
+    "name": "index",
+    "memberof": "src/app-uc/js/routes/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/app-uc/js/routes/index.js~index",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/app-uc/js/routes/index.js",
+    "importStyle": "index",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModuleRef",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "angularRef",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "name": "src/public/app.bootstrap.js",
+    "content": "// 手动加载Angular\nimport angular from 'angular';\nimport './app.module';\nangular.element(document).ready(() => {\n  angular.bootstrap(document, ['app']);\n});\n",
+    "static": true,
+    "longname": "src/public/app.bootstrap.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 29,
+    "kind": "file",
+    "name": "src/public/app.controller.js",
+    "content": "controller.$inject = ['$scope'];\nexport default function controller($scope) {\n\n  console.warn('This is root module controller.');\n\n}\n",
+    "static": true,
+    "longname": "src/public/app.controller.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 30,
+    "kind": "function",
+    "name": "controller",
+    "memberof": "src/public/app.controller.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/public/app.controller.js~controller",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/public/app.controller.js",
+    "importStyle": "controller",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "$scope",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 31,
+    "kind": "file",
+    "name": "src/public/app.module.js",
+    "content": "// 注：这里只包含应用代码\n// 在这里加载所有自己写的 SCSS\nimport '../../assets/scss/common.scss';\n\n// Angular项目入口文件\nimport angular from 'angular';\n\nrequire('angular-ui-router');\n\nimport AppCtrl from './app.controller';\n\n// 导入所有的angular\nconst app = angular.module('app', ['ui.router', 'oc.lazyLoad']);\n\napp.controller('AppCtrl', AppCtrl);\n\n// ui-router路由\nrequire('./app.route').default(app, angular);\nrequire('../app-uc/js/routes').default(app, angular);",
+    "static": true,
+    "longname": "src/public/app.module.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 32,
+    "kind": "variable",
+    "name": "app",
+    "memberof": "src/public/app.module.js",
+    "static": true,
+    "longname": "src/public/app.module.js~app",
+    "access": null,
+    "export": false,
+    "importPath": "webpack2-conf-test/src/public/app.module.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "file",
+    "name": "src/public/app.route.js",
+    "content": "export default (ngModuleRef, angularRef) => {\n  ngModuleRef.config([\n      '$urlRouterProvider',\n      '$locationProvider',\n      '$stateProvider',\n      '$logProvider',\n      '$qProvider',\n      '$compileProvider',\n      '$ocLazyLoadProvider',\n      (\n        $urlRouterProvider,\n        $locationProvider,\n        $stateProvider,\n        $logProvider,\n        $qProvider,\n        $compileProvider,\n        $ocLazyLoadProvider\n      ) => {\n\n        $locationProvider.html5Mode(false); // 开启H5模式URI\n        $logProvider.debugEnabled(true); //log 日志\n        $locationProvider.hashPrefix('!');\n\n        $qProvider.errorOnUnhandledRejections(false);\n        $compileProvider.debugInfoEnabled(false);\n\n        $ocLazyLoadProvider.config({\n          debug: true,\n          events: true\n        });\n\n        $stateProvider\n          .state({\n            name: 'index',\n            url: '',\n            controller: 'AppHomeCtrl',\n            templateProvider: ['$q', ($q) => {\n\n              const deferred = $q.defer();\n\n              require.ensure(['../app-home/index.html'], () => {\n                const template = require('../app-home/index.html');\n                deferred.resolve(template);\n              });\n\n              return deferred.promise;\n            }],\n            resolve: {\n              appHome: ['$q', '$ocLazyLoad', ($q, $ocLazyLoad) => {\n\n                const deferred = $q.defer();\n\n                require.ensure([], () => {\n                  const module = require('../app-home/index.js').default(angularRef);\n                  $ocLazyLoad.load({\n                    name: 'app-home'\n                  });\n                  deferred.resolve(module);\n                });\n\n                return deferred.promise;\n              }]\n            }\n          });\n\n        $urlRouterProvider.when('', '');\n        $urlRouterProvider.otherwise(''); //错误路由重定向\n\n      }\n    ])\n    .run(['$templateCache', ($templateCache) => {\n      $templateCache.removeAll();\n    }]);\n};\n",
+    "static": true,
+    "longname": "src/public/app.route.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 34,
+    "kind": "function",
+    "name": "app",
+    "memberof": "src/public/app.route.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/public/app.route.js~app",
+    "access": null,
+    "export": true,
+    "importPath": "webpack2-conf-test/src/public/app.route.js",
+    "importStyle": "app",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "ngModuleRef",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "angularRef",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 35,
+    "kind": "file",
+    "name": "src/public/polyfills.js",
+    "content": "// 我们在大多数现代浏览器中运行 Angular 程序时需要的标准填充物。\n// 暂无配置(以后可以改进 2017-02-23)\n\n// import 'core-js/es6';\n// import 'core-js/es7/reflect';\n\n// require('zone.js/dist/zone');\n// if (process.env.ENV === 'production') {\n//   // Production\n// } else {\n//   // Development\n//   Error['stackTraceLimit'] = Infinity;\n//   require('zone.js/dist/long-stack-trace-zone');\n// }\nimport 'es6-promise/auto';\n",
+    "static": true,
+    "longname": "src/public/polyfills.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 36,
+    "kind": "file",
+    "name": "src/public/vendor.js",
+    "content": "// 注： 提供商代码全部加载到这里\n// 统一加载第三方插件\nimport 'jquery';\nimport 'bootstrap';\nimport 'angular';\n// import 'angular-ui-router';\nimport 'oclazyload';\n\n\n// 这里引入第三方样式\nimport 'bootstrap/dist/css/bootstrap.min.css';\n",
+    "static": true,
+    "longname": "src/public/vendor.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 49,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "lineNumber": 193,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "external",
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "external",
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "external",
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "external",
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "external",
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "external",
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "external",
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "external",
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "lineNumber": 34,
+    "builtinExternal": true
+  }
+]

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/app-uc/js/controllers/base-module.ctrl.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/TaylorPzreal/webpack2-conf-test" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-home</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-apphome">apphome</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-mc</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public/js/controllers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-public/js/routes</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-routing">routing</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc/js/controllers</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-basemodule">basemodule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-collection">collection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-userinfo">userinfo</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">app-uc/js/routes</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-index">index</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">public</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-controller">controller</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-app">app</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/app-uc/js/controllers/base-module.ctrl.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default (ngModule) =&gt; {
+
+  ngModule.controller(&apos;BaseModuleCtrl&apos;, [&apos;$scope&apos;, ($scope) =&gt; {
+    console.warn(&apos;&#x57FA;&#x672C;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&#x6839;&#x6A21;&#x578B;&#x4FE1;&#x606F;&apos;);
+  }]);
+
+
+  // Singleton example.
+  const singleton = (() =&gt; {
+
+    // Instance stores  a referene to the Singleton.
+    let instance;
+
+    function init() {
+
+      function privateMethod() {
+        console.warn(&apos;this is private methoe.&apos;);
+      }
+
+      const privateVariable = &apos;this is private variable.&apos;;
+      const privateNumber = Math.random();
+
+      return {
+        publicMethod: () =&gt; {
+          console.warn(&apos;this is public method.&apos;);
+        },
+        publicProperty: &apos;this is public property.&apos;,
+        getRandomNumber: () =&gt; privateNumber
+      };
+    }
+
+    return {
+      initInstance: () =&gt; {
+        if(!instance) {
+          instance = init();
+        }
+        return instance;
+      }
+    };
+
+  })();
+
+  const singleton1 = singleton.initInstance();
+  const singleton2 = singleton.initInstance();
+
+  console.warn(&apos;singleton test: &apos;, singleton1.getRandomNumber === singleton2.getRandomNumber);
+
+
+  // Publish/Subscribe Implementation
+  const pubsub = {};
+
+  ((myObject) =&gt; {
+
+    // Storage for topics that can be broadcast or listened to.
+    const topics = {};
+    let subUid = -1;
+
+    // Publish or broadcast events of interest with a specific topic name and arguments such as the data to pass alone.
+    myObject.publish = (topic, args) =&gt; {
+      if (!topics[topic]) {
+        return  false;
+      }
+
+      const subscribers = topics[topic];
+      let len = subscribers ? subscribers.length : 0;
+
+      while(len--) {
+        subscribers[len].func(topic, args);
+      }
+
+      return this;
+    };
+
+      // Subscribe to events of interest with a specific topic name and a callback function,
+      // to be executed  when the topic/event is observed.
+    myObject.subscribe = (topic, func) =&gt; {
+
+      if (!topics[topic]) {
+        topics[topic] = [];
+      }
+
+      const token = (++subUid).toString();
+      topics[topic].push({
+        token,
+        func
+      });
+      return token;
+    };
+
+    // Unsubscribe from a specific topic, based on tokenized reference to the subscription.
+    myObject.unsubscribe = (token) =&gt; {
+
+      for (const m in topics) {
+        if (topics[m]) {
+          for(let i = 0, j = topics[m].length; i &lt; j; i++) {
+            if (topics[m][i].token === token) {
+              topics[m].splice(i, 1);
+              return token;
+            }
+          }
+        }
+      }
+      return this;
+    };
+
+  })(pubsub);
+
+  // &#x8BA2;&#x9605;
+  const subscription = pubsub.subscribe(&apos;inbox/newMessage&apos;, (topics, data) =&gt; {
+    console.warn(&apos;Logging&apos;, topics, &apos;: &apos;, data);
+  });
+
+  // &#x53D1;&#x5E03;
+  pubsub.publish(&apos;inbox/newMessage&apos;, &apos;hello public/subscribe world.&apos;);
+
+  setTimeout(() =&gt; {
+    pubsub.publish(&apos;inbox/newMessage&apos;, [1, 2, &apos;uuu&apos;]);
+
+    pubsub.publish(&apos;inbox/newMessage&apos;, {
+      name: &apos;Morning&apos;,
+      age: 18
+    });
+  }, 2000);
+
+  setTimeout(() =&gt; {
+    pubsub.unsubscribe(subscription);
+
+    pubsub.publish(&apos;inbox/newMessage&apos;, &apos;sent message ... &apos;);
+  }, 5000);
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
